@@ -48,3 +48,6 @@ VALUES
 INSERT INTO rangers (name, region)
 VALUES ('Darek Fox', 'Coastal Plains');
 
+
+-- Task Two: Count unique species ever sighted.
+SELECT COUNT(DISTINCT species_id) AS unique_species_count FROM sightings;
