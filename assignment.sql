@@ -61,3 +61,9 @@ SELECT r.name, COUNT(s.sighting_id) AS total_sightings
 FROM rangers AS r
 JOIN sightings AS s ON r.ranger_id = s.ranger_id
 GROUP BY r.name;
+
+-- Task five: List species that have never been sighted.
+SELECT s.common_name
+FROM species AS s
+LEFT JOIN sightings AS si ON s.species_id = si.species_id
+WHERE si.species_id IS NULL;
