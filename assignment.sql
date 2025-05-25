@@ -82,3 +82,12 @@ ORDER BY si.sighting_time DESC LIMIT 2;
 UPDATE species 
 SET conservation_status = 'Historic'
 WHERE discovery_date < '1800-01-01';
+
+
+
+-- Task nine:  Delete rangers who have never sighted any species
+DELETE FROM rangers
+WHERE ranger_id NOT IN (
+    SELECT ranger_id
+    FROM sightings
+);
