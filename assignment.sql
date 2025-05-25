@@ -12,6 +12,9 @@ CREATE TABLE species (
     conservation_status VARCHAR( 55 ) CHECK ( conservation_status IN ('Endangered', 'Vulnerable') )
 );
 
+ALTER TABLE species
+DROP CONSTRAINT species_conservation_status_check;
+
 CREATE TABLE sightings (
     sighting_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     ranger_id INTEGER REFERENCES rangers(ranger_id),
