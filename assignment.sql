@@ -43,3 +43,8 @@ VALUES
 (1, 2, 'Snowfall Pass', '2024-05-18 18:30:00', NULL);
 
 
+-- Task One:
+
+INSERT INTO rangers (name, region)
+VALUES ('Darek Fox', 'Coastal Plains');
+
