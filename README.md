@@ -82,3 +82,5 @@ SELECT COUNT(*), SUM(salary), AVG(salary)
 FROM employees;
 
 ```
+
+tldr: all of my sql code initially written on datagrip
