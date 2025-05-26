@@ -2,43 +2,33 @@
 
 ### ANS:
 
-PostgreSQL ekta powerful open-source relational database management system
-(RDBMS). Eta structure data manage korte pare, ar SQL language use kore query
-execute kora hoy. Eta ACID-compliant, mane data consistency, reliability ensure
-kore.
+PostgreSQL একটি শক্তিশালী ওপেন-সোর্স relational database management system (RDBMS)। এটি structure করা ডেটা সংরক্ষণ ও পরিচালনা করতে পারে এবং SQL ভাষা ব্যবহার করে query execute করা হয়। এটি ACID-compliant, অর্থাৎ এটি ডেটার consistency এবং reliability নিশ্চিত করে।
 
 ## 2. What is the purpose of a database schema in PostgreSQL?
 
 ### ANS:
 
-Schema holo ekta logical structure jeikhane amra database-er table, view, function
-etc organize kore rakhi. Schemar maddhome amra ekoi database er modde multiple
-users ba application er jonno separate structure create korte pari jekono conflict
-chara.
+Schema হলো একটি logical structure যেখানে আমরা database-এর table, view, function ইত্যাদি সুন্দরভাবে সংরক্ষণ করি। Schema-এর মাধ্যমে আমরা একই database-এর মধ্যে একাধিক user বা application-এর জন্য আলাদা আলাদা structure তৈরি করতে পারি কোনো রকম conflict ছাড়াই।
 
 ## 3. Explain the Primary Key and Foreign Key concepts in PostgreSQL.
 
 ### ANS:
 
-Primary Key holo ekta unique identifier je kono table er prottyek row ke identify
-kore. Eta duplicate thkkte pare na, null o thakte pare na.
-Foreign Key onno ekta table er Primary Key er upor reference kore, ja raletional
-database e table gulor moddhe ralation toiri kore.
+Primary Key হলো এমন একটি unique identifier যেটি একটি table-এর প্রতিটি row কে আলাদাভাবে চিহ্নিত করে। Primary key কখনোই duplicate রাখা যায় না এবং null ও থাকতে পারে না।
+Foreign Key অন্য একটি table-এর Primary Key এর reference হিসেবে কাজ করে, যার মাধ্যমে relational database-এ table গুলোর মধ্যে সম্পর্ক তৈরি হয়।
 
 ## 4. What is the difference between the `VARCHAR` and `CHAR` data types?
 
 ### ANS:
 
-`VARCHAR` holo variable length string, mane input er length onujayi storage hoy.
-`CHAR` holo fixed length string, mane always specified length maintain kore, even
-jodi input choto hoy.
+`VARCHAR` একটি variable length string, মানে ইনপুটের length উপর ভিত্তি করে এটি storage নেয়।
+`CHAR` একটি fixed length string, মানে এটি সবসময় নির্দিষ্ট একটি length বজায় রাখে, এমনকি ইনপুট ছোট হলেও।
 
 ## 5.Explain the purpose of the `WHERE` clause in a `SELECT` statement.
 
 ### ANS:
 
-`WHERE` clause use kore amra specific condition er upor based kore data filtering
-korte pari.
+`WHERE` clause ব্যবহার করে আমরা নির্দিষ্ট condition অনুযায়ী ডেটা filter করতে পারি।
 Example:
 
 ```sql
@@ -50,15 +40,14 @@ Example:
 
 ### ANS:
 
-`LIMIT` bole dey koto gulo row fetch korte hobe, ar `OFFSET` bole dey kotogulo row
-skip kore tarpor result dite hobe.
-Example: Pagination er jonno use kora hoy.
+`LIMIT` নির্ধারণ করে কতটি row query result-এ দেখা যাবে এবং `OFFSET` বলে দেয় কতটি row বাদ দিয়ে শুরু করতে হবে।
+Example: Pagination করার জন্য ব্যবহার করা হয়।
 
 ## 7. How can you modify data using `UPDATE` statements?
 
 ### ANS:
 
-`UPDATE` use kore existing table er data modify kora jay.
+`UPDATE` statement ব্যবহার করে আমরা existing table-এর ডেটা পরিবর্তন করতে পারি।
 Example:
 
 ```sql
@@ -71,7 +60,7 @@ WHERE id = 2;
 
 ### ANS:
 
-`JOIN` use kore multiple table theke data combine kora hoy, jekhaney tader moddhe relation thake.
+`JOIN` ব্যবহার করে একাধিক table থেকে সম্পর্কযুক্ত ডেটা একত্রে করা হয়। যখন দুটি বা একাধিক টেবিলের মধ্যে সম্পর্ক থাকে, তখন `JOIN` operation এর মাধ্যমে combined result পাওয়া যায়।.
 Example:
 
 ```sql
@@ -84,7 +73,8 @@ JOIN customers ON orders.customer_id = customers.id;
 
 ### ANS:
 
-function gulo use kore amra specific column er upor total count, sum, average calculate korte pari.
+এই function গুলোর মাধ্যমে আমরা নির্দিষ্ট একটি column-এর উপর মোট সংখ্যা (COUNT), মোট
+যোগ (SUM), এবং Avg (AVG) নির্ণয় করতে পারি।
 Example:
 
 ```sql
